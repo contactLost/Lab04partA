@@ -7,3 +7,5 @@
 /bombButton$ClickListener.class
 /prizeButton$ClickListener.class
 /bombButton$ClickListenerBomb.class
+/restartButton$ClickListener.class
+/restartButton.class

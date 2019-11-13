@@ -23,12 +23,12 @@ public class Game extends JFrame{
 	public Game() {
 		createComponents();
 
-		setTitle( "Game - ver BETA build 0.2");
+		setTitle( "Game - ver BETA build 0.1");
 		setSize( FRAME_WIDTH, FRAME_HEIGHT); 
 		setResizable(false);
 		setLayout( new BorderLayout() );
-		//  panel.setLayout( new BorderLayout() );
-		//  panel2.setLayout( new BorderLayout() );
+		//		panel.setLayout( new BorderLayout() );
+		//		panel2.setLayout( new BorderLayout() );
 		add( panel ,BorderLayout.NORTH);
 		add( panel2, BorderLayout.CENTER);
 		setVisible( true);
@@ -39,7 +39,7 @@ public class Game extends JFrame{
 
 	public static void main( String[] args ) {
 
-		game = new Game(); 
+		game = new Game();	
 
 		while(true) {
 
@@ -84,28 +84,28 @@ public class Game extends JFrame{
 				boolean placed = false;
 
 				if( ( ((int) ( prizeLocation / 5 ))  == i) && ( prizeLocation % 5 == j )) { //Row && Column for prize
-					button[i][j] = new prizeButton( "     " );  
+					button[i][j] = new prizeButton( "     " );		
 
 					placed = true;
-				}   
+				}			
 				if( ( ((int) ( firstBombLocation / 5 ))  == i) && ( firstBombLocation % 5 == j )) { //Row && Column first bomb
 					button[i][j] = new bombButton( "     "  );
 
 					placed = true;
-				}   
+				}			
 				if( (( (int) ( secondBombLocation / 5 ))  == i) && ( secondBombLocation % 5 == j )) { //Row && Column second bomb
 					button[i][j] = new bombButton( "     " );
 
 					placed = true;
-				}   
+				}			
 				if( !placed ) {
 					button[i][j] = new gameButton( "    "  );
-				}  
+				}		
 				panel2.add( button[i][j] , BorderLayout.CENTER);
-
-
+				
+				
 			}
-
+			
 		}
 		panel2.add( new restartButton("Restart") );
 	}
@@ -120,14 +120,12 @@ public class Game extends JFrame{
 	}
 
 	static void restart() {
-		game.setVisible(false);
-		gameButton.gameCondition = 0;
-		gameButton.attempts = 0;
+		
 		game = new Game();
-
+		
 
 	}
-
+	
 }
 
 
